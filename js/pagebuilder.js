@@ -116,8 +116,7 @@ function hitAPICall(url)
       if(data["status"])
       {
         //if api call is made with the invalid api data
-        var content = document.getElementById("content");
-        content.innerHTML = "<h3> <i class='material-icons moretopspace mediumicon'>search</i>  No Search Results Found </h3>";
+        renderMessage("search","content","No Search Results Found !!!");
       }
       else{
         //storing the results obtained from the api call in a Javascript object array
@@ -175,12 +174,43 @@ function fetchByCapital(parameter)
   var url = ("https://restcountries.eu/rest/v2/capital/").concat(parameter);
   hitAPICall(url);
 }
+function createDiv(large,medium,small,classes)
+{
+  var element = document.createElement("div");
+  element.classList.add("col-l-"+large,"col-m-"+medium,"col-s-"+small);
+  for(var index = 0;index<classes.length;index++){
+    element.classList.add(classes[index]);
+  }
+  return element;
+}
+function renderMessage(icon_name,id,data)
+{
+  var superelement = document.getElementById(id);
+  var element1 = createDiv(5,5,4,new Array("alignright"));
+  var icon = document.createElement("i");
+  icon.classList.add("material-icons","moretopspace","mediumicon");
+  icon.innerHTML = icon_name;
+  element1.appendChild(icon);
+
+  var element2 = createDiv(6,6,6,new Array("alignleft","topspace"));
+  var h3 = document.createElement("h3");
+  h3.innerHTML = data;
+  element2.appendChild(h3);
+
+  var element3 = createDiv(12,12,12,new Array());
+  element3.appendChild(element1);
+  element3.appendChild(element2);
+
+  superelement.innerHTML = element3.outerHTML;
+}
+
 //to create and render the cards with data on the display
 function displayCards()
 {
     //setting the loading text on the screen
-    var content = document.getElementById("content");
-    content.innerHTML = "<h3> <i class='material-icons moretopspace mediumicon'>explore</i> Finding results ...... </h3>";
+    renderMessage("explore","content","Finding results ......");
+    // var content = document.getElementById("content");
+    // content.innerHTML = "<h3> <i class='material-icons moretopspace mediumicon'>explore</i> Finding results ...... </h3>";
     //validating the user input
     var result = validateInput();
     console.log(result);
@@ -208,7 +238,6 @@ function displayCards()
     }
     //displaying the error results on the screen
     else{
-      var content = document.getElementById("content");
-      content.innerHTML = "<h3> <i class='material-icons moretopspace mediumicon'>error</i> Invalid search text </h3>";
+      renderMessage("error","content","Invalid search text");
     }
 }

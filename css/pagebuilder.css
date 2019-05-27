@@ -56,13 +56,17 @@
 }
 .mediumicon
 {
-  font-size : 40px;
+  font-size : 50px;
 }
 [class*="col-"] {
   float: left;
 }
 [class*="col-"] {
   width: 100%;
+}
+.underline
+{
+  border-bottom : 1px solid black;
 }
 /* custom css input text box */
 input[type=text],select{
@@ -72,6 +76,7 @@ input[type=text],select{
   border-radius : 5px;
   font-size : 15px;
   padding-left : 10px;
+  background-color : white;
 }
 /* custom css buttons */
 button
@@ -83,6 +88,7 @@ button
   padding-top : 5px;
   padding-bottom : 5px;
   border-radius : 7px;
+  background-color : white;
 }
 /* cards using css */
 .card
