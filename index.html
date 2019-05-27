@@ -1,0 +1,70 @@
+<html>
+  <head>
+    <title> Country Explorer </title>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <!-- Importing google material icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <!-- Importing external css file -->
+    <link rel = "stylesheet" type = "text/css" href =  "css/pagebuilder.css" />
+  </head>
+  <body>
+    <!-- Here header starts -->
+    <div class="col-l-12 col-s-12 col-m-12 bottomspace">
+      <!-- Icon and APP name starts -->
+      <div class = "col-l-3 col-s-12 col-m-3">
+        <center>
+          <div class="col-l-6 col-m-6 col-s-6 alignright topspace">
+            <i class="material-icons mediumicon">directions_boat</i>
+          </div>
+          <div class="col-l-6 col-m-6 col-s-6 break alignleft">
+            <h2> CountryExp </h2>
+          </div>
+        </center>
+      </div>
+      <!-- Icon and APP name ends here -->
+
+      <!-- Search Bar code starts -->
+      <div class = "col-l-5 col-s-12 col-m-5 topspace">
+        <center><input id="user-input" type = "text" placeholder = " Search for Country ....." /></center>
+      </div>
+      <!-- Search Bar code ends here -->
+
+      <!-- Search criteria starts here -->
+      <div class = "col-l-3 col-s-7 col-m-4 topspace">
+        <div class = "container">
+          <select id = "search-criteria">
+            <option value = "1">Country FullName</option>
+            <option value = "2">Country PartialName</option>
+            <option value = "3">Country Region</option>
+            <option value = "4">Country Captial</option>
+          </select>
+        </div>
+      </div>
+      <!-- Search criteria ends here -->
+
+      <!-- Search Button starts here -->
+      <div class = "col-l-1 col-s-5 col-m-12 moretopspace bottomspace">
+        <center>
+          <button onclick = "displayCards()"><i class="material-icons">search</i></button>
+        </center>
+      </div>
+      <!-- Search Button ends here -->
+    </div>
+    <!-- Header ends here -->
+
+    <hr>
+    <hr>
+
+    <!-- Loading the search result starts here -->
+    <div class="col-l-12 col-m-12 col-s-12 morebottomspace" >
+      <div class="container textcenter" id="content">
+          <h3> <i class="material-icons moretopspace mediumicon">directions_boat</i>  Welcome to CountryExp !!! </h3>
+      </div>
+    </div>
+    <!-- Loading the search results ends here -->
+
+    <!-- Importing custom JS code  -->
+    <script src = "js/pagebuilder.js" ></script>
+    <script src = "js/country.js" ></script>
+  </body>
+</html>

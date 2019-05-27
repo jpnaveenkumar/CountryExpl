@@ -1,0 +1,139 @@
+<html>
+  <head>
+    <title> Fresh Explorer </title>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+      <!-- Importing google material icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+      <!-- Importing external css file -->
+    <link rel = "stylesheet" type = "text/css" href =  "css/pagebuilder.css" />
+  </head>
+  <body>
+    <!-- Here header starts -->
+    <div class = "col-l-12 col-m-12 col-s-12">
+      <!-- Back Arrow starts here -->
+      <div class = "col-l-1 col-m-1 col-s-1 textcenter topspace">
+        <i onclick = "rebase()" class = "material-icons mediumicon">arrow_back</i>
+      </div>
+      <!-- Back arrow ends here -->
+      <!-- Logo and APP name starts here -->
+      <div class = "col-l-11 col-m-11 col-s-11">
+        <div class = "col-l-5 col-m-5 col-s-5 alignright topspace">
+          <i class = "material-icons mediumicon">directions_boat</i>
+        </div>
+        <div class = "col-l-6 col-m-6 col-s-6">
+          <h2> CountryExp </h2>
+        </div>
+      </div>
+      <!-- Logo and APP name ends here -->
+    </div>
+    <!-- Header ends here -->
+    <hr>
+    <hr>
+    <div class="col-l-12 col-m-12 col-s-12">
+
+      <!-- Left side card starts here -->
+      <div class = "col-l-3 col-m-3 col-s-12 card moretopspace leftspace">
+        <center>
+          <img class="moretopspace" id="flag" width="80%"/>
+          <h2 id="countryname"></h2>
+          <table class="morebottomspace">
+            <tr>
+              <th> Name </th>
+              <td id="name"> </td>
+            </tr>
+
+            <tr>
+              <th> Capital </th>
+              <td id="capital"> </td>
+            </tr>
+
+            <tr>
+              <th> Region </th>
+              <td id="region"> </td>
+            </tr>
+
+            <tr>
+              <th> SubRegion </th>
+              <td id="subregion"> </td>
+            </tr>
+
+          </table>
+        </center>
+      </div>
+      <!-- Left side code ends here -->
+
+      <!-- Goole map segment starts here -->
+      <div class = "col-l-8 col-m-8 col-s-12 card moreleftspace moretopspace" id="map">
+      </div>
+      <!-- Google map segment ends here -->
+
+      <!-- displaying other cards starts here -->
+      <div class = "col-l-11 col-m-11 col-s-12 moreleftspace morebottomspace moretopspace">
+        <!-- Geographic stats card starts here -->
+        <div class = "col-l-2 col-m-2 col-s-12 card moretopspace moreleftspace borderright textcenter">
+          <center>
+            <table class="morebottomspace paddingright">
+              <tr>
+                <th colspan="2">Geographic Stats</th>
+              </tr>
+              <tr>
+                <th> Population </th>
+                <td id="population"> </td>
+              </tr>
+
+              <tr>
+                <th> Area </th>
+                <td id="area"> </td>
+              </tr>
+
+              <tr>
+                <th> Gini </th>
+                <td id="gini"> </td>
+              </tr>
+
+              <tr>
+                <th> Timezone </th>
+                <td id="timezone"> </td>
+              </tr>
+            </table>
+          </center>
+        </div>
+        <!-- Geographic stats card ends here -->
+
+        <!-- language card starts here -->
+        <div class = "col-l-2 col-m-3 col-s-12 card moretopspace moreleftspace borderright">
+          <center id="languages">
+          </center>
+        </div>
+        <!-- language card ends here -->
+
+        <!-- currency card starts here -->
+        <div class = "col-l-2 col-m-3 col-s-12 card moretopspace moreleftspace borderright">
+          <center id="currency">
+          </center>
+        </div>
+        <!-- currency card ends here -->
+
+        <!-- Borders card starts here -->
+        <div class = "col-l-2 col-m-3 col-s-12 card moretopspace moreleftspace borderright">
+          <center id="borders">
+          </center>
+        </div>
+        <!-- Borders card ends here -->
+
+        <!-- Nickname card starts here -->
+        <div class = "col-l-2 col-m-3 col-s-12 card moretopspace moreleftspace borderright">
+          <center id="nickname">
+          </center>
+        </div>
+        <!-- Nickname card ends here -->
+      </div>
+      <!-- displaying other cards ends here -->
+
+    <!-- Importing custom JS files -->
+    <script src = "js/detailpagehelper.js" ></script>
+    <!-- Importing Google map libraries -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWu0dniy4yBWyPoaB5gsJHkfz0XcMbO7g&callback=initMap"></script>
+    <script src = "js/country.js" ></script>
+  </body>
+</html>
