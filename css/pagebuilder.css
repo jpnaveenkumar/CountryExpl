@@ -56,7 +56,7 @@
 }
 .mediumicon
 {
-  font-size : 40px;
+  font-size : 50px;
 }
 [class*="col-"] {
   float: left;
@@ -76,6 +76,7 @@ input[type=text],select{
   border-radius : 5px;
   font-size : 15px;
   padding-left : 10px;
+  background-color : white;
 }
 /* custom css buttons */
 button
@@ -87,6 +88,7 @@ button
   padding-top : 5px;
   padding-bottom : 5px;
   border-radius : 7px;
+  background-color : white;
 }
 /* cards using css */
 .card
