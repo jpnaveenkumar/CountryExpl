@@ -64,6 +64,10 @@
 [class*="col-"] {
   width: 100%;
 }
+.underline
+{
+  border-bottom : 1px solid black;
+}
 /* custom css input text box */
 input[type=text],select{
   border : 3px solid black;

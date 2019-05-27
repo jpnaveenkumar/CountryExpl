@@ -34,10 +34,12 @@ function populateTableV1(data,id,header)
   table.classList.add("morebottomspace");
   var head = document.createElement("th");
   head.innerHTML = header;
+  head.classList.add("underline");
   table.appendChild(head);
   if(data.length == 0){
     var cell = document.createElement("tr");
     cell.innerHTML = "No Data Found!!";
+    cell.classList.add("moretopspace")
     table.appendChild(cell);
   }else{
     for(var index=0 ; index < data.length ; index++)
@@ -56,11 +58,13 @@ function populateTableV2(data,id,header)
   var table = document.createElement("table");
   table.classList.add("morebottomspace");
   var head = document.createElement("th");
+  head.classList.add("underline");
   head.innerHTML = header;
   table.appendChild(head);
   if(data.length == 0){
     var cell = document.createElement("tr");
     cell.innerHTML = "No Data Found!!";
+    cell.classList.add("moretopspace")
     table.appendChild(cell);
   }else{
     for(var index=0 ; index < data.length ; index++)
